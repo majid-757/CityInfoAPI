@@ -2,7 +2,7 @@
 
 namespace CityInfoAPI.Models
 {
-    public class PointOfInterestForCreationDto
+    public class PointOfInterestForUpdateDto
     {
         [Required(ErrorMessage = "نام را وارد کنید")]
         [MaxLength(50)]
