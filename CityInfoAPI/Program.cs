@@ -17,7 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
-builder.Services.AddScoped<LocalMailService>();
+builder.Services.AddTransient<LocalMailService>();
 
 var app = builder.Build();
 

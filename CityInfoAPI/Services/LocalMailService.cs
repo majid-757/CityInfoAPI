@@ -1,6 +1,6 @@
 ﻿namespace CityInfoAPI.Services
 {
-    public class LocalMailService
+    public class LocalMailService : IMailService
     {
         private string _mailTo = "majid.asadollahi95@gmail.com";
         private string _mailFrom = "sales@eshopmvc.ir";
