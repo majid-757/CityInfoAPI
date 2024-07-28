@@ -12,7 +12,7 @@ namespace CityInfoAPI
         {
             new CityDto()
             {
-                Id = 1, Name = "Tabriz", Description = "My City", PointOfInterests = new List<PointOfInterestDto>()
+                Id = 1, Name = "Tabriz", Description = "My City", PointOfInterest = new List<PointOfInterestDto>()
                 {
                     new PointOfInterestDto()
                     {
@@ -30,7 +30,7 @@ namespace CityInfoAPI
             },
             new CityDto()
             {
-                Id = 2, Name = "Tehran", Description = "My City", PointOfInterests = new List<PointOfInterestDto>()
+                Id = 2, Name = "Tehran", Description = "My City", PointOfInterest = new List<PointOfInterestDto>()
                 {
                     new PointOfInterestDto()
                     {
@@ -51,7 +51,7 @@ namespace CityInfoAPI
                 Id = 3,
                 Name = "Esfahan",
                 Description = "My City",
-                PointOfInterests = new List<PointOfInterestDto>()
+                PointOfInterest = new List<PointOfInterestDto>()
                 {
                     new PointOfInterestDto()
                     {

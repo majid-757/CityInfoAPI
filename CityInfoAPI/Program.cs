@@ -1,5 +1,6 @@
 using CityInfoAPI;
 using CityInfoAPI.DbContexts;
+using CityInfoAPI.Repositories;
 using CityInfoAPI.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,10 @@ builder.Services.AddControllers(options => options.ReturnHttpNotAcceptable = tru
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+
 
 #if DEBUG
 builder.Services.AddTransient<IMailService, LocalMailService>();
@@ -34,6 +39,8 @@ builder.Services.AddDbContext<CityInfoDbContext>(option =>
     option.UseSqlite(builder.Configuration["ConnectionStrings:CityConnectionString"]);
 });
 
+
+builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
 
 var app = builder.Build();
 
